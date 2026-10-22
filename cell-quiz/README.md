@@ -11,10 +11,12 @@ Open `index.html` in any modern browser. No build step or server is needed.
 - `index.html` - page structure
 - `css/style.css` - styles (light and dark mode)
 - `js/app.js` - quiz data (names, accepted answers, definitions, box positions) and logic
-- `images/` - diagrams with the printed labels removed
+- `images/` - diagrams with the quiz labels removed
 - `images/originals/` - the original, fully labeled diagrams
 
 ## Editing
 In `js/app.js`, each cell has a list `T` of structures:
 `{n: name, a: [accepted answers], x, y: box center in image pixels, w: box width, d: definition}`.
 `W` and `H` for each cell are the image's pixel size. Progress is saved in the browser's localStorage.
+
+Definitions come from the supplied glossary and are used word for word.
