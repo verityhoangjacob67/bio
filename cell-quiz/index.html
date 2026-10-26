@@ -3,7 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Label the Cell</title>
+<title>Label the Cell — animal, plant and bacteria cell diagram quiz</title>
+<meta name="description" content="Type the name of each structure on animal, plant and bacteria cell diagrams. A correct answer unlocks its definition. Free, no sign-up, and your progress is saved in the browser.">
+<link rel="canonical" href="https://bio.daylightt.me/cell-quiz/">
+<meta name="theme-color" id="themeColor" content="#e9eff3">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Label the Cell">
+<meta property="og:title" content="Label the Cell">
+<meta property="og:description" content="An interactive labelling quiz for animal, plant and bacteria cell diagrams.">
+<meta property="og:url" content="https://bio.daylightt.me/cell-quiz/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%230a7f93'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='%23e9eff3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,23 +21,46 @@
 </head>
 <body>
 <div class="wrap">
-<header>
-  <div>
+<header class="top">
+  <div class="intro">
     <h1>Label the cell</h1>
-    <p class="sub">Pick a cell, then type the name of each structure into its box. Get it right and the box turns green and shows the definition.</p>
+    <p class="sub">Pick a diagram, then type the name of each structure into the box at the end of its line. Get it right and the box turns green and unlocks the definition.</p>
   </div>
   <div class="tools">
-    <button class="t" id="hintBtn" aria-pressed="false">Show hints</button>
-    <button class="t" id="revealBtn">Reveal all</button>
-    <button class="t" id="resetBtn">Start over</button>
+    <button class="t" id="hintBtn" type="button" aria-pressed="false">Show hints</button>
+    <button class="t" id="revealBtn" type="button">Reveal answers</button>
+    <button class="t" id="resetBtn" type="button">Reset diagram</button>
+    <button class="t" id="themeBtn" type="button">Auto</button>
   </div>
 </header>
-<div class="tabs" role="tablist"><button class="tab" role="tab" data-k="animal" aria-selected="true">Animal cell</button><button class="tab" role="tab" data-k="plant" aria-selected="false">Plant cell</button><button class="tab" role="tab" data-k="prokaryote" aria-selected="false">Bacteria cell</button></div>
-<div class="score"><div class="bar"><i id="bar"></i></div><div class="count" id="count">0 / 0</div></div>
-<div class="scroll"><div class="stage" id="stage"><img id="pic" alt="" src=""></div></div>
-<p class="hint-note">Press Enter to check a guess. Wide diagram on a phone? Scroll sideways. Tap a green label to reopen its definition.</p>
-<h2>Definitions</h2>
-<div class="cards" id="cards"></div>
+
+<div class="tabs" role="tablist" aria-label="Cell diagrams">
+  <button class="tab" role="tab" id="tab-animal" data-k="animal" aria-selected="true" aria-controls="panel">Animal cell</button>
+  <button class="tab" role="tab" id="tab-plant" data-k="plant" aria-selected="false" aria-controls="panel" tabindex="-1">Plant cell</button>
+  <button class="tab" role="tab" id="tab-prokaryote" data-k="prokaryote" aria-selected="false" aria-controls="panel" tabindex="-1">Bacteria cell</button>
+</div>
+
+<div class="panel" id="panel" role="tabpanel" aria-labelledby="tab-animal">
+  <div class="banner" id="banner" hidden>
+    <p><strong id="bannerTitle"></strong><span id="bannerNote"></span></p>
+    <button class="t" id="nextBtn" type="button" hidden></button>
+  </div>
+
+  <div class="score">
+    <div class="bar" id="barWrap" role="progressbar" aria-label="Structures found" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><i id="bar"></i></div>
+    <div class="count" id="count">0 / 16</div>
+  </div>
+
+  <div class="scroll"><div class="stage" id="stage"><img id="pic" alt="Cutaway diagram of a generalized animal cell with its labels removed" src="images/animal-cell.jpg" width="1387" height="1148" draggable="false"></div></div>
+  <p class="hint-note">Press Enter to check a guess. On a phone, scroll the diagram sideways. Tap a green label to reopen its definition, and hover or focus a box to find its card below.</p>
+
+  <h2>Definitions</h2>
+  <p class="h2-note">Each card fills in as you label the diagram. Revealed answers are marked so they never count as found.</p>
+  <div class="cards" id="cards"></div>
+</div>
+
+<p class="sr-only" id="live" role="status" aria-live="polite"></p>
+<noscript><p class="hint-note">This quiz needs JavaScript to check your answers. The diagrams are still on the page.</p></noscript>
 </div>
 <script src="js/app.js"></script>
 </body>
