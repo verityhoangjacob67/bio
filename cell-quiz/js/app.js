@@ -19,7 +19,6 @@ animal:{label:"Animal cell",img:"images/animal-cell.jpg",W:1387,H:1148,alt:"Cuta
 {n:"Microfilaments",a:["microfilament","actin filament"],x:195,y:665,w:170,d:D.mf},
 {n:"Intermediate filaments",a:["intermediate filament"],x:185,y:711,w:190,d:"Rope-like cytoskeleton fibers of medium thickness that reinforce cell shape and anchor organelles."},
 {n:"Microtubules",a:["microtubule"],x:190,y:756,w:170,d:D.mt},
-{n:"Microvilli",a:["microvilli","microvillus"],x:155,y:855,w:150,d:"Projections that increase the cell’s surface area."},
 {n:"Peroxisome",a:["peroxisome"],x:190,y:962,w:190,d:D.pe},
 {n:"Mitochondrion",a:["mitochondrion","mitochondria"],x:317,y:1105,w:190,d:D.mi},
 {n:"Rough ER",a:["rough er","rough endoplasmic reticulum","rer"],x:468,y:246,w:140,d:D.rer},
@@ -47,18 +46,18 @@ plant:{label:"Plant cell",img:"images/plant-cell.jpg",W:1155,H:978,alt:"Cutaway 
 {n:"Peroxisome",a:["peroxisome"],x:178,y:737,w:100,d:D.pe},
 {n:"Plasma membrane",a:["plasma membrane","cell membrane"],x:176,y:777,w:120,d:D.pm},
 {n:"Cell wall",a:["cell wall"],x:228,y:853,w:140,d:"Outer layer that maintains the cell’s shape and protects it from mechanical damage; made of cellulose, other polysaccharides, and protein."},
-{n:"Wall of adjacent cell",a:["wall of adjacent cell","adjacent cell wall","cell wall of adjacent cell","neighboring cell wall"],x:296,y:919,w:145,d:"The cell wall of a neighboring cell, which sits next to this cell’s own wall."},
 {n:"Chloroplast",a:["chloroplast"],x:835,y:790,w:130,d:"Photosynthetic organelle; converts energy of sunlight to chemical energy stored in sugar molecules."},
 {n:"Plasmodesmata",a:["plasmodesmata","plasmodesma"],x:620,y:910,w:130,d:"Cytoplasmic channels through cell walls that connect the cytoplasms of adjacent cells."}
 ]}
-,prokaryote:{label:"Prokaryotic cell",img:"images/prokaryotic-cell.jpg",W:1735,H:1052,alt:"Diagram of a rod-shaped prokaryotic cell and a colorized TEM of a bacterium, with labels removed",T:[
-{n:"Fimbriae",a:["fimbriae","fimbria"],x:790,y:170,w:190,d:"Attachment structures on the surface of some prokaryotes (not visible on TEM)."},
-{n:"Nucleoid",a:["nucleoid"],x:818,y:275,w:170,d:"Region where the cell’s DNA is located (not enclosed by a membrane)."},
-{n:"Ribosomes",a:["ribosome"],x:890,y:372,w:170,d:"Complexes that synthesize proteins."},
-{n:"Plasma membrane",a:["plasma membrane","cell membrane"],x:908,y:453,w:190,d:"Membrane enclosing the cytoplasm."},
-{n:"Cell wall",a:["cell wall"],x:970,y:538,w:170,d:"Rigid structure outside the plasma membrane."},
-{n:"Glycocalyx",a:["glycocalyx","capsule"],x:1025,y:650,w:170,d:"Outer coating of many prokaryotes, consisting of a capsule or a slime layer."},
-{n:"Flagella",a:["flagella","flagellum"],x:955,y:780,w:150,d:"Locomotion organelles of some prokaryotes."}
+,prokaryote:{label:"Prokaryotic cell",img:"images/prokaryotic-cell.jpg",W:921,H:872,alt:"Cutaway diagram of a rod-shaped bacterium with pili and a flagellum, plus an electron micrograph of a bacterium, with labels removed",T:[
+{n:"Pilus",a:["pilus","pili","fimbriae","fimbria"],x:322,y:110,w:110,d:"Hairlike surface appendage (also called a fimbria) that helps the cell attach to surfaces and other cells."},
+{n:"Cytoplasm",a:["cytoplasm"],x:655,y:296,w:130,d:"Semifluid interior of the cell, enclosed by the plasma membrane, that contains the ribosomes and nucleoid."},
+{n:"Ribosomes",a:["ribosome"],x:655,y:334,w:130,d:"Complexes that synthesize proteins."},
+{n:"Nucleoid",a:["nucleoid"],x:622,y:375,w:140,d:"Region where the cell’s DNA is located (not enclosed by a membrane)."},
+{n:"Plasma membrane",a:["plasma membrane","cell membrane"],x:605,y:451,w:170,d:"Membrane enclosing the cytoplasm."},
+{n:"Cell wall",a:["cell wall"],x:552,y:482,w:110,d:"Rigid structure outside the plasma membrane."},
+{n:"Capsule",a:["capsule","glycocalyx"],x:550,y:512,w:110,d:"Sticky outer coating (a glycocalyx) of many prokaryotes that protects the cell and helps it adhere."},
+{n:"Flagellum",a:["flagellum","flagella"],x:316,y:688,w:130,d:"Long whiplike locomotion organelle of some prokaryotes."}
 ]}};
 var KEY="cell-quiz-v2", store={animal:{},plant:{},prokaryote:{}}, cur="animal", hints=false, openId=null, els=[];
 function norm(s){return s.toLowerCase().replace(/[^a-z]/g,"").replace(/s$/,"");}
