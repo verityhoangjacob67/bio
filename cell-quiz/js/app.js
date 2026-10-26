@@ -49,7 +49,7 @@ plant:{label:"Plant cell",img:"images/plant-cell.jpg",W:1155,H:978,alt:"Cutaway 
 {n:"Chloroplast",a:["chloroplast"],x:835,y:790,w:130,d:"Photosynthetic organelle; converts energy of sunlight to chemical energy stored in sugar molecules."},
 {n:"Plasmodesmata",a:["plasmodesmata","plasmodesma"],x:620,y:910,w:130,d:"Cytoplasmic channels through cell walls that connect the cytoplasms of adjacent cells."}
 ]}
-,prokaryote:{label:"Prokaryotic cell",img:"images/prokaryotic-cell.jpg",W:921,H:872,alt:"Cutaway diagram of a rod-shaped bacterium with pili and a flagellum, plus an electron micrograph of a bacterium, with labels removed",T:[
+,prokaryote:{label:"Bacteria cell",img:"images/prokaryotic-cell.jpg",W:921,H:872,alt:"Cutaway diagram of a rod-shaped bacterium with pili and a flagellum, plus an electron micrograph of a bacterium, with labels removed",T:[
 {n:"Pilus",a:["pilus","pili","fimbriae","fimbria"],x:322,y:110,w:110,d:"Hairlike surface appendage (also called a fimbria) that helps the cell attach to surfaces and other cells."},
 {n:"Cytoplasm",a:["cytoplasm"],x:655,y:296,w:130,d:"Semifluid interior of the cell, enclosed by the plasma membrane, that contains the ribosomes and nucleoid."},
 {n:"Ribosomes",a:["ribosome"],x:655,y:334,w:130,d:"Complexes that synthesize proteins."},
