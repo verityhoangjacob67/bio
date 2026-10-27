@@ -116,7 +116,7 @@ function focusNext(i){
 function solve(i){
   if(store[cur][i]===1) return;
   var t=C[cur].T[i], wasRevealed=store[cur][i]===2, total=C[cur].T.length;
-  store[cur][i]=1; save(); render(); showPop(i);
+  store[cur][i]=1; save(); render();
   if(wasRevealed) announce("Correct — "+t.n+".");
   if(tally(cur).f===total) announce("All "+total+" structures found in the "+C[cur].label.toLowerCase()+".");
   focusNext(i);
